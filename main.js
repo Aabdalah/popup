@@ -18,6 +18,7 @@ popup.addEventListener("mousedown", function(e) {
   lastY = e.clientY;
 });
 popup.addEventListener("touchstart", function(e) {
+  e.preventDefault();
   isDragging = true;
   lastY = e.touches[0].clientY;
 });
