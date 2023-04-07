@@ -33,6 +33,7 @@ popup.addEventListener("mousemove", function(e) {
   }
 });
 popup.addEventListener("touchmove", function(e) {
+  e.preventDefault();
   if (isDragging) {
     let deltaY = e.touches[0].clientY - lastY;
     let rect = popup.getBoundingClientRect();
