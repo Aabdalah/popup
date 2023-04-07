@@ -9,6 +9,9 @@ popupButton.addEventListener("click", function() {
 popupClose.addEventListener("click", function() {
   popup.style.display = "none";
 });
+popupClose.addEventListener("touchstart", function() {
+  popup.style.display = "none";
+});
 
 let isDragging = false;
 let  lastY;
