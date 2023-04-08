@@ -6,7 +6,7 @@ let startY;
 popupButton.addEventListener("click", function() {
   popup.style.animation = "move 1s ease forwards";
   popup.style.display = "block";
-  popup.style.top = "50%";
+  popup.style.top = "70%";
   
 });
 
@@ -15,7 +15,7 @@ popupClose.addEventListener("click", function() {
 
 });
 popupClose.addEventListener("touchstart", function() {
-  popup.style.display = "none";
+  popup.style.animation =  "close 1s ease forwards";
 
 });
 
@@ -64,6 +64,9 @@ popup.addEventListener("mouseup", function() {
 });
 popup.addEventListener("touchend", function() {
   isDragging = false;
-  
+  console.log(lastY)
+  if(lastY>450){
+    popup.style.animation =  "close 1s ease forwards";
+  }
 });
 
